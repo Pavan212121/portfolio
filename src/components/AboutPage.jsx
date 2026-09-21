@@ -72,8 +72,8 @@ const services = [
 
 const selectedWorks = [
   {
-    title: 'Pulse Project',
-    subtitle: 'Health & Analytics Platform',
+    title: 'Axiro Pulse',
+    subtitle: 'SaaS Platform',
     image: '/my-assets/pulse-project.png',
   },
   {
@@ -97,11 +97,11 @@ const clientLogos = [
   'Ibunify',
 ];
 
-export const AboutPage = ({ onNavigate = () => {} }) => {
+export const AboutPage = ({ onNavigate = () => { } }) => {
   return (
     <div className="about-page-wrapper">
       <div className="about-container">
-        
+
         {/* 1. Hero Top Split: Headline & Designer Portrait */}
         <section className="about-hero-split-section">
           <div className="about-hero-left">
@@ -125,7 +125,7 @@ export const AboutPage = ({ onNavigate = () => {} }) => {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="about-hero-subtext"
             >
-              Product Designer with 10 years of experience designing digital products end-to-end, helping teams build experiences that work for both users and business goals.
+              Product Designer with 1 years of experience designing digital products end-to-end, helping teams build experiences that work for both users and business goals.
             </motion.p>
           </div>
 
@@ -173,7 +173,7 @@ export const AboutPage = ({ onNavigate = () => {} }) => {
           </div>
           <div className="info-content-col">
             <p className="info-main-paragraph">
-              I'm Arturo Spatino, a digital product designer based in Italy with over 10 years of experience designing digital products across startups, agencies and consulting environments.
+              I'm Pavan Kumar, a digital product designer based in India with over 1 years of experience designing digital products across startups, agencies and consulting environments.
             </p>
             <a href="#contact" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="info-discover-link">
               Discover more
@@ -195,7 +195,7 @@ export const AboutPage = ({ onNavigate = () => {} }) => {
             {services.map((srv, idx) => (
               <div key={idx} className="service-card-item">
                 <span className="service-card-num">{srv.num}</span>
-                
+
                 <div className="service-card-icon-wrap">
                   {srv.icon}
                 </div>
@@ -285,10 +285,10 @@ export const AboutPage = ({ onNavigate = () => {} }) => {
           </h2>
 
           <a
-            href="mailto:ciao@arturospatino.com"
+            href="mailto:pavan.dsgn@gmail.com"
             className="connect-huge-email"
           >
-            ciao@arturospatino.com
+            pavan.dsgn@gmail.com
           </a>
 
           <div className="connect-social-bottom">

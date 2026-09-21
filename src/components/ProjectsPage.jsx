@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const fullProjectsData = [
   {
-    id: 'pulse-project',
-    title: 'Pulse Project — Health & Analytics',
+    id: 'Axiro Pulse',
+    title: 'Axiro Pulse — Saas Platform',
     description: 'User-centric analytics and digital tracking platform with intuitive data visualization.',
     image: '/my-assets/pulse-project.png',
     tags: ['WEB DESIGN', 'UI/UX'],
@@ -73,7 +73,7 @@ export const ProjectsPage = ({ onNavigateHome }) => {
   return (
     <div className="projects-page-wrapper">
       <div className="projects-container">
-        
+
         {/* Page Top Header */}
         <div className="projects-header-row">
           <h1 className="projects-main-title">Projects</h1>
@@ -147,7 +147,7 @@ export const ProjectsPage = ({ onNavigateHome }) => {
                 <div className="project-info-box">
                   <h2 className="project-item-title">{project.title}</h2>
                   <p className="project-item-desc">{project.description}</p>
-                  
+
                   {/* Category Tags Pills */}
                   <div className="project-tags-row">
                     {project.tags.map((tag, idx) => (

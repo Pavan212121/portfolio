@@ -118,7 +118,7 @@ export function Hero() {
               gap: "5px",
             }}
           >
-            <span>Kawsar Ahmed</span>
+            <span>Pavan Kumar</span>
             <span>👋</span>
           </motion.div>
         </motion.div>

@@ -94,7 +94,7 @@ export const Testimonials = () => {
       }}
     >
       <div className="container">
-        
+
         {/* Top Header & Pagination Counter */}
         <div
           style={{

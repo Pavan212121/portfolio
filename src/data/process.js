@@ -44,7 +44,7 @@ export const processSteps = [
 export const testimonialsData = [
   {
     id: 1,
-    quote: "Alex transformed our entire product suite. The design system cut our feature rollout time in half while raising our app store rating from 4.1 to 4.9.",
+    quote: "Pavan transformed our entire product suite. The design system cut our feature rollout time in half while raising our app store rating from 4.1 to 4.9.",
     author: "Elena Rostova",
     role: "VP of Product",
     company: "Zenith Pay",
@@ -52,7 +52,7 @@ export const testimonialsData = [
   },
   {
     id: 2,
-    quote: "The attention to subtle micro-interactions, dark mode aesthetics, and WCAG accessibility is unparalleled. Alex thinks like a product strategist and executes like an artist.",
+    quote: "The attention to subtle micro-interactions, dark mode aesthetics, and WCAG accessibility is unparalleled. Pavan thinks like a product strategist and executes like an artist.",
     author: "Marcus Vance",
     role: "Chief Technology Officer",
     company: "Nova AI",
@@ -60,7 +60,7 @@ export const testimonialsData = [
   },
   {
     id: 3,
-    quote: "Working with Alex felt effortless. The user research insights directly reduced customer churn by 38% in the first quarter post-launch.",
+    quote: "Working with Pavan felt effortless. The user research insights directly reduced customer churn by 38% in the first quarter post-launch.",
     author: "Sarah Jenkins",
     role: "Head of UX",
     company: "Strata Cloud",

@@ -1,31 +1,9 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
-import CursorRingField from './CursorRingField';
 
 export const Footer = () => {
   return (
     <footer className="daymark-footer-root">
-      {/* Interactive Cursor Ring Field Background on White */}
-      <div
-        className="daymark-footer-canvas-bg"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 1,
-          overflow: 'hidden',
-          pointerEvents: 'none',
-        }}
-      >
-        <CursorRingField
-          background="#ffffff"
-          speed={20}
-          cameraDistance={280}
-          colors={["#7189ff", "#3074f9", "#1e293b"]}
-          style={{ width: '100%', height: '100%' }}
-        />
-      </div>
 
       {/* Subtle Soft Glow Accent Layer */}
       <div className="daymark-ambient-glow" aria-hidden="true" />
@@ -38,7 +16,7 @@ export const Footer = () => {
 
         {/* 4-Column Navigation & Info Grid */}
         <div className="daymark-columns-grid">
-          
+
           {/* Col 1: About & Socials */}
           <div className="daymark-col daymark-about-col">
             <h3 className="daymark-col-title">About</h3>
@@ -117,8 +95,8 @@ export const Footer = () => {
             <h3 className="daymark-col-title">Contact us</h3>
             <div className="daymark-links-list">
               <a href="#contact">Book a call</a>
-              <a href="mailto:hello@daymark.studio">hello@daymark.studio</a>
-              <a href="tel:+12025550147">+1 (202) 555-0147</a>
+              <a href="mailto:pavan.dsgn@gmail.com">pavan.dsgn@gmail.com</a>
+              <a href="tel:+918919258386">+918919258386</a>
             </div>
           </div>
 
@@ -127,12 +105,12 @@ export const Footer = () => {
         {/* Bottom Credits & Location Row */}
         <div className="daymark-bottom-bar">
           <span className="daymark-copyright">
-            © 2026 Daymark. All Rights Reserved.
+            © 2026 . All Rights Reserved.
           </span>
 
           <div className="daymark-location-tag">
             <MapPin size={12} className="daymark-pin-icon" />
-            <span>Los Angeles, California, USA</span>
+            <span>Hyderabad,Telangana,India</span>
           </div>
         </div>
       </div>
@@ -182,22 +160,27 @@ export const Footer = () => {
         .daymark-giant-wordmark-wrap {
           width: 100%;
           overflow: hidden;
-          margin-bottom: clamp(48px, 6vw, 76px);
+          margin-bottom: clamp(40px, 5vw, 64px);
           padding-top: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
         }
 
         .daymark-giant-title {
           font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-          font-size: clamp(4.2rem, 16.5vw, 15.5rem);
+          font-size: clamp(3.2rem, 11.5vw, 10.5rem);
           font-weight: 850;
           color: #000000;
-          letter-spacing: -0.04em;
-          line-height: 0.88;
+          letter-spacing: -0.03em;
+          line-height: 0.95;
           margin: 0;
           text-transform: uppercase;
           user-select: none;
           display: block;
           width: 100%;
+          text-align: center;
         }
 
         /* 4 Columns Grid */

@@ -4,8 +4,8 @@ import { ArrowRight } from 'lucide-react';
 
 const showcaseData = [
   {
-    id: 'pulse-project',
-    title: 'Pulse Project — Health & Analytics',
+    id: 'Axiro Pulse',
+    title: 'Axiro Pulse — SaaS Platform',
     image: '/my-assets/pulse-project.png',
     category: 'all',
     type: 'popular',
@@ -69,7 +69,7 @@ export const AbstractShowcase = ({ onNavigate }) => {
   return (
     <section id="work" style={{ width: '100%', padding: '100px 0 80px 0', backgroundColor: '#ffffff' }}>
       <div className="container">
-        
+
         {/* Top Header Row */}
         <div
           style={{

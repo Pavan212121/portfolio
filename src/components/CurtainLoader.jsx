@@ -84,55 +84,40 @@ export const CurtainLoader = ({ onComplete, replayKey = 0 }) => {
         ))}
       </div>
 
-      {/* Center Loader Content (Counter, Brand, Progress) */}
+      {/* Bottom-Right Loader Content (Counter & Progress) */}
       <AnimatePresence>
         {!isOpening && (
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -25 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             style={{
               position: 'absolute',
-              inset: 0,
+              right: 'clamp(1.5rem, 5vw, 4rem)',
+              bottom: 'clamp(1.5rem, 5vw, 3.5rem)',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
+              alignItems: 'flex-end',
+              justifyContent: 'flex-end',
               color: '#ffffff',
               zIndex: 10,
               userSelect: 'none',
+              textAlign: 'right',
             }}
           >
-            {/* Top Tagline */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              style={{
-                fontSize: '0.78rem',
-                fontWeight: 700,
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                color: 'rgba(255, 255, 255, 0.45)',
-                marginBottom: '16px',
-              }}
-            >
-              Curtain Reveal • Portfolio
-            </motion.div>
-
             {/* Percentage Number Counter */}
             <div
               style={{
                 fontFamily: 'var(--font-heading), sans-serif',
-                fontSize: 'clamp(4.5rem, 11vw, 8.5rem)',
+                fontSize: 'clamp(4rem, 10vw, 7.5rem)',
                 fontWeight: 800,
                 lineHeight: 1,
                 letterSpacing: '-0.04em',
                 background: 'linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.5) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                marginBottom: '20px',
+                marginBottom: '16px',
               }}
             >
               {count}%
@@ -141,7 +126,7 @@ export const CurtainLoader = ({ onComplete, replayKey = 0 }) => {
             {/* Minimalist Progress Line */}
             <div
               style={{
-                width: '180px',
+                width: 'clamp(140px, 15vw, 200px)',
                 height: '2px',
                 background: 'rgba(255, 255, 255, 0.12)',
                 borderRadius: '4px',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Check, Send } from 'lucide-react';
+import { Mail, Check, Send, AlertCircle } from 'lucide-react';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -10,23 +10,45 @@ export const ContactSection = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errorMessage) setErrorMessage('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send your message. Please try again.');
+      }
+
       setSubmitted(true);
+      setFormData({ name: '', email: '', whatsapp: '' });
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({ name: '', email: '', whatsapp: '' });
-      }, 4000);
-    }, 600);
+      }, 5000);
+    } catch (err) {
+      console.error('Contact submission error:', err);
+      setErrorMessage(err.message || 'Something went wrong. Please try again or reach out directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -34,7 +56,7 @@ export const ContactSection = () => {
       <div className="contact-fullscreen-wrapper">
         <div className="contact-inner-container">
           <div className="contact-grid-layout">
-            
+
             {/* Left Column */}
             <div className="contact-left-col">
               <div className="contact-left-top">
@@ -50,7 +72,7 @@ export const ContactSection = () => {
                     <span className="contact-email-text">
                       to{' '}
                       <a href="mailto:hi@01project.com" className="contact-email-anchor">
-                        hi@01project.com
+                        pavan.dsgn@gmail.com
                       </a>
                     </span>
                   </div>
@@ -190,6 +212,13 @@ export const ContactSection = () => {
                         className="contact-line-input"
                       />
                     </div>
+
+                    {errorMessage && (
+                      <div className="contact-error-banner">
+                        <AlertCircle size={16} className="contact-error-icon" />
+                        <span>{errorMessage}</span>
+                      </div>
+                    )}
 
                     <button
                       type="submit"
@@ -451,6 +480,25 @@ export const ContactSection = () => {
 
         .contact-line-input:focus {
           border-bottom-color: #111827;
+        }
+
+        .contact-error-banner {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px 14px;
+          background-color: #fef2f2;
+          border: 1px solid #fecaca;
+          border-radius: 8px;
+          color: #b91c1c;
+          font-size: 13.5px;
+          line-height: 1.45;
+          margin-top: 6px;
+        }
+
+        .contact-error-icon {
+          flex-shrink: 0;
+          color: #dc2626;
         }
 
         .contact-submit-pill-btn {

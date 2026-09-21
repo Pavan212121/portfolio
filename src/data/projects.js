@@ -1,7 +1,7 @@
 export const projectsData = [
   {
-    id: "pulse-project",
-    title: "Pulse Project — Health & Analytics",
+    id: "Axiro Pulse",
+    title: "Axiro Pulse — SaaS Platform",
     category: "Web Application",
     subcategory: "Data & Healthcare Platform",
     shortDescription: "User-centric analytics and digital tracking platform with intuitive data visualization and telemetry.",
@@ -14,7 +14,7 @@ export const projectsData = [
     accentColor: "#38bdf8",
     featured: true,
     tags: ["Web UX", "Analytics", "Data Vis", "Dashboard", "React UI"],
-    overview: "Pulse Project transforms complex biometric and health analytics into actionable, accessible insights for modern clinical teams and users.",
+    overview: "Axiro Pulse transforms complex biometric and health analytics into actionable, accessible insights for modern clinical teams and users.",
     metrics: [
       { label: "Data Readability Score", value: "99%" },
       { label: "User Task Speed", value: "3.2x Faster" },
