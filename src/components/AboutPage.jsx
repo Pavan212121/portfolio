@@ -324,9 +324,9 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
         /* 1. Hero Top Split */
         .about-hero-split-section {
           display: grid;
-          grid-template-columns: 1.15fr 0.85fr;
+          grid-template-columns: 1fr 1fr;
           gap: clamp(36px, 5vw, 68px);
-          align-items: center;
+          align-items: flex-start;
           margin-bottom: clamp(60px, 8vw, 90px);
         }
 
@@ -363,14 +363,14 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
 
         .about-hero-portrait-wrap {
           width: 100%;
-          max-width: 440px;
+          max-width: 700px;
           margin-left: auto;
           aspect-ratio: 3.2 / 4;
-          max-height: 480px;
-          border-radius: 14px;
+          max-height: 700px;
+          border-radius: 8px;
           overflow: hidden;
           background: #f4f4f5;
-          box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.1);
         }
 
         .about-hero-portrait-img {
