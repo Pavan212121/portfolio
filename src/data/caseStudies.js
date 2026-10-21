@@ -12,7 +12,7 @@ export const caseStudies = {
     timeline: '3 months',
     tools: 'Figma, Prototyping & Research Tools',
     platform: 'Responsive Web Application',
-    coverImage: '/my-assets/pulse-project.png',
+    coverImage: '/my-assets/pulse-project.webp',
     accentColor: '#5429e8',
     tags: ['Founder Platform', 'Idea Validation', 'Customer Intelligence', 'Survey Builder', 'Figma'],
 
@@ -115,7 +115,7 @@ export const caseStudies = {
     services: 'UX/UI Design, Brand Direction, Conversion Optimisation',
     team: '1 designer, 1 brand strategist',
     timeline: '2.5 months',
-    coverImage: '/my-assets/mahaveer-real-estates.png',
+    coverImage: '/my-assets/mahaveer-real-estates.webp',
     accentColor: '#f59e0b',
     tags: ['Real Estate', 'Luxury Branding', 'Web Design', 'Conversion UX'],
 
@@ -211,7 +211,7 @@ export const caseStudies = {
     timeline: '3 months',
     tools: 'Figma, Prototyping & Workflow Tools',
     platform: 'Customer Mobile App & Operations Admin Portal',
-    coverImage: '/my-assets/karnik-website.png',
+    coverImage: '/my-assets/karnik-website.webp',
     accentColor: '#d97706',
     tags: ['Automotive Care', 'Mobile App', 'Admin Portal', 'Service Booking', 'Design System'],
 
@@ -317,7 +317,7 @@ export const caseStudies = {
     timeline: '3 months',
     tools: 'Figma, Prototyping & Workflow Tools',
     platform: 'Customer Mobile App & Operations Admin Portal',
-    coverImage: '/my-assets/karnik-mobile-app.png',
+    coverImage: '/my-assets/karnik-mobile-app.webp',
     accentColor: '#d97706',
     tags: ['Automotive Care', 'Mobile App', 'Admin Portal', 'Service Booking', 'Design System'],
 
@@ -421,7 +421,7 @@ export const caseStudies = {
     services: 'UX Research, Mobile UI Design, Information Architecture',
     team: '1 senior designer, 1 UX researcher',
     timeline: '2 months',
-    coverImage: '/my-assets/ibunify-mobile-app.png',
+    coverImage: '/my-assets/ibunify-mobile-app.webp',
     accentColor: '#34d399',
     tags: ['Fintech', 'Mobile App', 'Information Architecture', 'Micro-UX'],
 

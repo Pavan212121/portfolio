@@ -29,7 +29,7 @@ export const LandscapeBanner = () => {
         }}
       >
         <img
-          src="/figma-landscape.png"
+          src="/figma-landscape.webp"
           alt="Crafting digital experiences that connect"
           style={{
             width: '100%',

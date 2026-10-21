@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/Hero Secction Image.png";
+import heroImage from "../assets/hero-section.webp";
 
 export function Hero() {
   return (

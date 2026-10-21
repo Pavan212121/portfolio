@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import profileImg from '../assets/Profile.png';
+import profileImg from '../assets/Profile.webp';
 
 const services = [
   {
@@ -73,17 +73,17 @@ const selectedWorks = [
   {
     title: 'Axiro Pulse',
     subtitle: 'SaaS Platform',
-    image: '/my-assets/pulse-project.png',
+    image: '/my-assets/pulse-project.webp',
   },
   {
     title: 'Mahaveer Real Estates',
     subtitle: 'Luxury Property Platform',
-    image: '/my-assets/mahaveer-real-estates.png',
+    image: '/my-assets/mahaveer-real-estates.webp',
   },
   {
     title: 'Karnik Digital Suite',
     subtitle: 'Web & Mobile Ecosystem',
-    image: '/my-assets/karnik-mobile-app.png',
+    image: '/my-assets/karnik-mobile-app.webp',
   },
 ];
 

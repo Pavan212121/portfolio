@@ -18,13 +18,13 @@ import {
 import { caseStudies } from '../data/caseStudies';
 
 const ALL_PROJECTS = [
-  { id: 'Axiro Pulse', title: 'Axiora Pulse — Founder Intelligence Platform', image: '/my-assets/pulse-project.png', tags: ['Founder Platform', 'Validation Framework'] },
-  { id: 'mahaveer-real-estates', title: 'Mahaveer Real Estates', image: '/my-assets/mahaveer-real-estates.png', tags: ['Real Estate', 'Web Design'] },
-  { id: 'karnik-website', title: 'Karnik — Premium Automotive Care Experience', image: '/my-assets/karnik-website.png', tags: ['Automotive Care', 'Admin Portal'] },
-  { id: 'karnik-mobile-app', title: 'Karnik — Premium Automotive Care Experience', image: '/my-assets/karnik-mobile-app.png', tags: ['Automotive Care', 'Mobile App'] },
-  { id: 'ibunify-mobile-app', title: 'Ibunify Mobile Experience', image: '/my-assets/ibunify-mobile-app.png', tags: ['Fintech', 'Mobile App'] },
-  { id: 'pjs-brand-identity', title: "PJ's Brand Identity", image: '/my-assets/pjs-logo.png', tags: ['Branding', 'Logo'] },
-  { id: 'butterfly-designs-logo', title: 'Butterfly Designs', image: '/my-assets/butterfly-designs-logo.png', tags: ['Branding', 'Identity'] },
+  { id: 'Axiro Pulse', title: 'Axiora Pulse — Founder Intelligence Platform', image: '/my-assets/pulse-project.webp', tags: ['Founder Platform', 'Validation Framework'] },
+  { id: 'mahaveer-real-estates', title: 'Mahaveer Real Estates', image: '/my-assets/mahaveer-real-estates.webp', tags: ['Real Estate', 'Web Design'] },
+  { id: 'karnik-website', title: 'Karnik — Premium Automotive Care Experience', image: '/my-assets/karnik-website.webp', tags: ['Automotive Care', 'Admin Portal'] },
+  { id: 'karnik-mobile-app', title: 'Karnik — Premium Automotive Care Experience', image: '/my-assets/karnik-mobile-app.webp', tags: ['Automotive Care', 'Mobile App'] },
+  { id: 'ibunify-mobile-app', title: 'Ibunify Mobile Experience', image: '/my-assets/ibunify-mobile-app.webp', tags: ['Fintech', 'Mobile App'] },
+  { id: 'pjs-brand-identity', title: "PJ's Brand Identity", image: '/my-assets/pjs-logo.webp', tags: ['Branding', 'Logo'] },
+  { id: 'butterfly-designs-logo', title: 'Butterfly Designs', image: '/my-assets/butterfly-designs-logo.webp', tags: ['Branding', 'Identity'] },
 ];
 
 const fadeUp = (delay = 0) => ({
