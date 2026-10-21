@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 const fullProjectsData = [
   {
     id: 'Axiro Pulse',
-    title: 'Axiro Pulse — Saas Platform',
-    description: 'User-centric analytics and digital tracking platform with intuitive data visualization.',
+    title: 'Axiora Pulse — Founder Decision Platform',
+    description: 'A guided intelligence platform that helps early-stage founders evaluate startup viability through structured market research and customer feedback.',
     image: '/my-assets/pulse-project.png',
-    tags: ['WEB DESIGN', 'UI/UX'],
+    tags: ['FOUNDER PLATFORM', 'UI/UX'],
     categories: ['Web design'],
   },
   {
@@ -20,16 +20,16 @@ const fullProjectsData = [
   },
   {
     id: 'karnik-website',
-    title: 'Karnik Digital Platform',
-    description: 'Modern corporate web experience built with seamless UX architecture and performance.',
+    title: 'Karnik — Premium Automotive Care Experience',
+    description: 'A connected customer and admin experience for discovering services, managing vehicles, and booking care across Kompally and Kondapur.',
     image: '/my-assets/karnik-website.png',
-    tags: ['WEB DESIGN', 'UI/UX'],
+    tags: ['AUTOMOTIVE CARE', 'UI/UX'],
     categories: ['Web design'],
   },
   {
     id: 'karnik-mobile-app',
-    title: 'Karnik Mobile Experience',
-    description: 'Intuitive iOS & Android application designed for streamlined user engagement.',
+    title: 'Karnik — Mobile Automotive Care App',
+    description: 'A mobile-first automotive-care experience that helps customers discover services, manage vehicles, book care, and track service progress.',
     image: '/my-assets/karnik-mobile-app.png',
     tags: ['MOBILE APP', 'UI/UX'],
     categories: ['Mobile application'],
@@ -63,7 +63,7 @@ const fullProjectsData = [
 
 const categories = ['All', 'Web design', 'Branding', 'Mobile application'];
 
-export const ProjectsPage = ({ onNavigateHome }) => {
+export const ProjectsPage = ({ onNavigateHome, onNavigate }) => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const filteredProjects = activeCategory === 'All'
@@ -109,6 +109,8 @@ export const ProjectsPage = ({ onNavigateHome }) => {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="project-card-item"
+                onClick={() => onNavigate && onNavigate(`project:${project.id}`)}
+                style={{ cursor: 'pointer' }}
               >
                 {/* Image Container */}
                 <div className="project-image-box">
@@ -343,7 +345,7 @@ export const ProjectsPage = ({ onNavigateHome }) => {
           font-size: 9.5px;
           font-weight: 700;
           letter-spacing: 0.06em;
-          text-transform: uppercase;
+          text-transform: none;
           color: #18181b;
           border: 1px solid #e4e4e7;
           padding: 2.5px 8px;

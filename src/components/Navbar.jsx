@@ -37,6 +37,11 @@ export const Navbar = ({ currentView = 'home', onNavigate = () => {} }) => {
       onNavigate('about');
       setMobileMenuOpen(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (link.key === 'contact') {
+      e.preventDefault();
+      onNavigate('contact');
+      setMobileMenuOpen(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       if (currentView !== 'home') {
         e.preventDefault();
@@ -97,10 +102,11 @@ export const Navbar = ({ currentView = 'home', onNavigate = () => {} }) => {
           className="desktop-nav"
         >
           {navLinks.map((link) => {
-            const isWorkActive = link.key === 'work' && currentView === 'work';
+            const isWorkActive = link.key === 'work' && (currentView === 'work' || currentView.startsWith('project:'));
             const isHomeActive = link.key === 'home' && currentView === 'home';
             const isAboutActive = link.key === 'about' && currentView === 'about';
-            const isActive = isWorkActive || isHomeActive || isAboutActive;
+            const isContactActive = link.key === 'contact' && currentView === 'contact';
+            const isActive = isWorkActive || isHomeActive || isAboutActive || isContactActive;
 
             return (
               <a

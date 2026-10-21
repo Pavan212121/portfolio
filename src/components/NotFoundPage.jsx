@@ -18,7 +18,7 @@ export const NotFoundPage = ({ onNavigateHome = () => {}, onNavigate = () => {} 
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="not-found-hero-heading"
           >
-            <span className="heading-bold-line">OOPS SORRY</span>
+            <span className="heading-bold-line">Oops, Sorry</span>
             <span className="heading-light-line">Page not found.</span>
           </motion.h1>
 
@@ -313,7 +313,7 @@ export const NotFoundPage = ({ onNavigateHome = () => {}, onNavigate = () => {} 
           font-weight: 700;
           color: #111827;
           letter-spacing: -0.025em;
-          text-transform: uppercase;
+          text-transform: none;
         }
 
         .heading-light-line {

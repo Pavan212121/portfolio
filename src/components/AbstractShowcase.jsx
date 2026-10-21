@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 const showcaseData = [
   {
     id: 'Axiro Pulse',
-    title: 'Axiro Pulse — SaaS Platform',
+    title: 'Axiora Pulse — Founder Decision Platform',
     image: '/my-assets/pulse-project.png',
     category: 'all',
     type: 'popular',
@@ -19,14 +19,14 @@ const showcaseData = [
   },
   {
     id: 'karnik-website',
-    title: 'Karnik Digital Platform',
+    title: 'Karnik — Premium Automotive Care Experience',
     image: '/my-assets/karnik-website.png',
     category: 'all',
     type: 'new',
   },
   {
     id: 'karnik-mobile-app',
-    title: 'Karnik Mobile App',
+    title: 'Karnik — Mobile Automotive Care App',
     image: '/my-assets/karnik-mobile-app.png',
     category: 'all',
     type: 'popular',
@@ -40,29 +40,29 @@ const showcaseData = [
   },
   {
     id: 'pjs-logo',
-    title: "PJ's LOGO & Brand Identity",
+    title: "PJ's Logo & Brand Identity",
     image: '/my-assets/pjs-logo.png',
     category: 'all',
     type: 'new',
   },
   {
     id: 'butterfly-designs-logo',
-    title: 'Butterfly Designs LOGO',
+    title: 'Butterfly Designs Logo',
     image: '/my-assets/butterfly-designs-logo.png',
     category: 'all',
     type: 'popular',
   },
 ];
 
-const categories = ['ALL', 'POPULAR', 'NEW'];
+const categories = ['All', 'Popular', 'New'];
 
 export const AbstractShowcase = ({ onNavigate }) => {
-  const [activeTab, setActiveTab] = useState('ALL');
+  const [activeTab, setActiveTab] = useState('All');
 
   const filteredItems = showcaseData.filter((item) => {
-    if (activeTab === 'ALL') return true;
-    if (activeTab === 'POPULAR') return item.type === 'popular';
-    if (activeTab === 'NEW') return item.type === 'new';
+    if (activeTab === 'All') return true;
+    if (activeTab === 'Popular') return item.type === 'popular';
+    if (activeTab === 'New') return item.type === 'new';
     return true;
   });
 
@@ -214,7 +214,7 @@ export const AbstractShowcase = ({ onNavigate }) => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.35, delay: index * 0.06 }}
-                onClick={() => onNavigate && onNavigate('work')}
+                onClick={() => onNavigate && onNavigate(`project:${item.id}`)}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -238,6 +238,8 @@ export const AbstractShowcase = ({ onNavigate }) => {
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       width: '100%',
                       height: '100%',

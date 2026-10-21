@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
 
-export const Footer = () => {
+export const Footer = ({ onNavigate = () => {} }) => {
   return (
     <footer className="daymark-footer-root">
 
@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="daymark-footer-container">
         {/* Giant Edge-to-Edge Wordmark */}
         <div className="daymark-giant-wordmark-wrap">
-          <h1 className="daymark-giant-title">THANKYOU</h1>
+          <h1 className="daymark-giant-title">Thank You</h1>
         </div>
 
         {/* 4-Column Navigation & Info Grid */}
@@ -21,7 +21,7 @@ export const Footer = () => {
           <div className="daymark-col daymark-about-col">
             <h3 className="daymark-col-title">About</h3>
             <p className="daymark-about-text">
-              We create thoughtful digital experiences that feel simple, human, and easy to love. From the little details to the bigger picture, everything is designed with care to make everyday moments feel a little more effortless.
+              I design thoughtful digital experiences that feel simple, human, and easy to use. From small interface details to end-to-end product flows, everything is crafted with care to solve real user needs.
             </p>
 
             <div className="daymark-social-icons-row">
@@ -72,9 +72,9 @@ export const Footer = () => {
           <div className="daymark-col">
             <h3 className="daymark-col-title">Sitemap</h3>
             <div className="daymark-links-list">
-              <a href="#">Home</a>
-              <a href="#about">Studio</a>
-              <a href="#work">Projects</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('home'); }}>Home</a>
+              <a href="#about" onClick={(e) => { e.preventDefault(); onNavigate('about'); }}>Studio</a>
+              <a href="#work" onClick={(e) => { e.preventDefault(); onNavigate('work'); }}>Projects</a>
               <a href="#">Blogs</a>
             </div>
           </div>
@@ -94,7 +94,7 @@ export const Footer = () => {
           <div className="daymark-col">
             <h3 className="daymark-col-title">Contact us</h3>
             <div className="daymark-links-list">
-              <a href="#contact">Book a call</a>
+              <a href="#contact" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}>Book a call</a>
               <a href="mailto:pavan.dsgn@gmail.com">pavan.dsgn@gmail.com</a>
               <a href="tel:+918919258386">+918919258386</a>
             </div>
@@ -176,7 +176,6 @@ export const Footer = () => {
           letter-spacing: -0.03em;
           line-height: 0.95;
           margin: 0;
-          text-transform: uppercase;
           user-select: none;
           display: block;
           width: 100%;

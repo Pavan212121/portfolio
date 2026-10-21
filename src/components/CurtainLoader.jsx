@@ -9,34 +9,44 @@ export const CurtainLoader = ({ onComplete, replayKey = 0 }) => {
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
+    // Check if loader has already run in this session
+    if (typeof window !== 'undefined' && sessionStorage.getItem('portfolio_loaded')) {
+      setIsFinished(true);
+      if (onComplete) onComplete();
+      return;
+    }
+
     setCount(0);
     setIsOpening(false);
     setIsFinished(false);
 
-    // Smooth counter animation from 0% to 100%
+    // Fast counter animation from 0% to 100% (~120ms total)
     const interval = setInterval(() => {
       setCount((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
           setTimeout(() => {
             setIsOpening(true);
-          }, 300);
+          }, 60);
           return 100;
         }
-        const step = Math.floor(Math.random() * 8) + 4;
+        const step = Math.floor(Math.random() * 15) + 15;
         return Math.min(100, prev + step);
       });
-    }, 45);
+    }, 15);
 
     return () => clearInterval(interval);
   }, [replayKey]);
 
   useEffect(() => {
     if (isOpening) {
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('portfolio_loaded', 'true');
+      }
       const timer = setTimeout(() => {
         setIsFinished(true);
         if (onComplete) onComplete();
-      }, 1400);
+      }, 450);
       return () => clearTimeout(timer);
     }
   }, [isOpening, onComplete]);
@@ -69,9 +79,9 @@ export const CurtainLoader = ({ onComplete, replayKey = 0 }) => {
             initial={{ y: 0 }}
             animate={isOpening ? { y: '-100%' } : { y: 0 }}
             transition={{
-              duration: 0.85,
+              duration: 0.4,
               ease: [0.76, 0, 0.24, 1],
-              delay: isOpening ? i * 0.08 : 0,
+              delay: isOpening ? i * 0.04 : 0,
             }}
             style={{
               flex: 1,

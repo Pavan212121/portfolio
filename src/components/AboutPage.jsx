@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import image5 from '../assets/Image5.png';
 import profileImg from '../assets/Profile.png';
 
 const services = [
@@ -125,7 +124,7 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="about-hero-subtext"
             >
-              Product Designer with 1 years of experience designing digital products end-to-end, helping teams build experiences that work for both users and business goals.
+              Product Designer with 1+ years of experience designing digital products end-to-end, helping teams build experiences that work for both users and business goals.
             </motion.p>
           </div>
 
@@ -143,22 +142,6 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
           </motion.div>
         </section>
 
-        {/* 2. Full-Width Panoramic Mobile App Showcase Banner */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="about-panoramic-section"
-        >
-          <div className="about-panoramic-frame">
-            <img
-              src={image5}
-              alt="Digital Product Showcase"
-              className="about-panoramic-img"
-            />
-          </div>
-        </motion.section>
 
         {/* 3. Info Section */}
         <motion.section
@@ -173,7 +156,7 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
           </div>
           <div className="info-content-col">
             <p className="info-main-paragraph">
-              I'm Pavan Kumar, a digital product designer based in India with over 1 years of experience designing digital products across startups, agencies and consulting environments.
+              I'm Pavan Kumar, a digital product designer based in India with 1+ years of experience designing digital products across startups, agencies and consulting environments.
             </p>
             <a href="#contact" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="info-discover-link">
               Discover more
@@ -293,6 +276,14 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
 
           <div className="connect-social-bottom">
             <a
+              href="#contact"
+              onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
+              className="connect-linkedin-link"
+            >
+              Contact Form
+            </a>
+            <span style={{ color: '#cbd5e1', margin: '0 6px' }}>•</span>
+            <a
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
@@ -381,32 +372,6 @@ export const AboutPage = ({ onNavigate = () => { } }) => {
           display: block;
         }
 
-        /* 2. Panoramic Banner */
-        .about-panoramic-section {
-          margin-bottom: clamp(64px, 8vw, 96px);
-        }
-
-        .about-panoramic-frame {
-          width: 100%;
-          border-radius: 0;
-          overflow: hidden;
-          background: #f3f4f6;
-          box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.06);
-        }
-
-        .about-panoramic-img {
-          width: 100%;
-          height: auto;
-          max-height: 1000px;
-          object-fit: cover;
-          border-radius: 0;
-          display: block;
-          transition: transform 0.5s ease;
-        }
-
-        .about-panoramic-frame:hover .about-panoramic-img {
-          transform: scale(1.015);
-        }
 
         /* Common Section Label */
         .section-label-text {

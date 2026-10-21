@@ -50,12 +50,17 @@ export const skillsData = [
 ];
 
 export const toolsList = [
-  { name: "Figma", type: "Design System & UI", icon: "Figma" },
-  { name: "Framer", type: "Motion & Web Publishing", icon: "Layers" },
-  { name: "Protopie", type: "Advanced Prototyping", icon: "Smartphone" },
-  { name: "Principle", type: "Micro-animation", icon: "Zap" },
-  { name: "Maze", type: "User Testing & Insights", icon: "CheckCircle2" },
-  { name: "Storybook", type: "UI Handoff & Docs", icon: "BookOpen" },
-  { name: "Rive", type: "Interactive Vector Motion", icon: "Play" },
-  { name: "VS Code", type: "Front-end Code Sync", icon: "Code2" }
+  { name: "Figma", type: "Interface Design & Tokens", icon: "Component" },
+  { name: "FigJam", type: "Collaborative Whiteboarding", icon: "Compass" },
+  { name: "Sketch", type: "UI & Vector Design", icon: "Layers" },
+  { name: "Adobe XD", type: "Interaction & Wireframes", icon: "Layout" },
+  { name: "Miro", type: "Mind Mapping & User Flows", icon: "Boxes" },
+  { name: "Maze", type: "Unmoderated Usability Testing", icon: "Search" },
+  { name: "Framer", type: "Motion & Web Publishing", icon: "Zap" },
+  { name: "ProtoPie", type: "Advanced Sensor Prototyping", icon: "Smartphone" },
+  { name: "Photoshop", type: "Visual Assets & Retouching", icon: "Eye" },
+  { name: "Illustrator", type: "Vector Icons & Illustration", icon: "Palette" },
+  { name: "After Effects", type: "Motion Graphics & UI Keyframing", icon: "Video" },
+  { name: "Canva", type: "Visual Design & Brand Assets", icon: "Frame" },
+  { name: "Jira", type: "Agile Sprint & Issue Management", icon: "CheckSquare" }
 ];

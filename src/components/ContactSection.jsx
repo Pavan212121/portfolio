@@ -68,10 +68,10 @@ export const ContactSection = () => {
                 {/* Direct Contact Info & Social Icons */}
                 <div className="contact-channels-row">
                   <div className="contact-email-meta">
-                    <span className="contact-sub-label">or contact us</span>
+                    <span className="contact-sub-label">or reach out directly</span>
                     <span className="contact-email-text">
                       to{' '}
-                      <a href="mailto:hi@01project.com" className="contact-email-anchor">
+                      <a href="mailto:pavan.dsgn@gmail.com" className="contact-email-anchor">
                         pavan.dsgn@gmail.com
                       </a>
                     </span>
@@ -106,7 +106,7 @@ export const ContactSection = () => {
 
                     {/* Mail */}
                     <a
-                      href="mailto:hi@01project.com"
+                      href="mailto:pavan.dsgn@gmail.com"
                       className="contact-circle-btn"
                       aria-label="Email"
                     >
@@ -120,11 +120,11 @@ export const ContactSection = () => {
               <div className="contact-bottom-badge-row">
                 <div className="project-badge-pill">
                   <span className="badge-green-dot" />
-                  <span className="badge-brand-title">01 project</span>
+                  <span className="badge-brand-title">Pavan Kumar</span>
                   <div className="badge-vertical-divider" />
                   <div className="badge-tagline">
-                    <span>IDEAS THAT SHAPE</span>
-                    <span>TOMORROW</span>
+                    <span>Ideas that shape</span>
+                    <span>tomorrow</span>
                   </div>
                 </div>
 
@@ -148,8 +148,8 @@ export const ContactSection = () => {
             {/* Right Column: Contact Card */}
             <div className="contact-form-card">
               <h3 className="contact-form-title">
-                Leave your contacts<br />
-                and we will contact you
+                Send a message<br />
+                and I'll get back to you
               </h3>
 
               <AnimatePresence mode="wait">
@@ -416,7 +416,7 @@ export const ContactSection = () => {
           font-weight: 700;
           color: #64748b;
           letter-spacing: 0.05em;
-          text-transform: uppercase;
+          text-transform: none;
           line-height: 1.25;
         }
 

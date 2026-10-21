@@ -27,31 +27,17 @@ import {
 
 const tools = [
   { name: 'Figma', category: 'Interface Design & Tokens', icon: Component },
+  { name: 'FigJam', category: 'Collaborative Whiteboarding', icon: Compass },
   { name: 'Sketch', category: 'UI & Vector Design', icon: Layers },
   { name: 'Adobe XD', category: 'Interaction & Wireframes', icon: Layout },
-  { name: 'Framer', category: 'Motion & Web Publishing', icon: Zap },
-  { name: 'FigJam', category: 'Collaborative Whiteboarding', icon: Compass },
   { name: 'Miro', category: 'Mind Mapping & User Flows', icon: Boxes },
-  { name: 'Mural', category: 'Strategy & Empathy Workshops', icon: Frame },
-  { name: 'Whimsical', category: 'Information Architecture', icon: FileText },
-  { name: 'Balsamiq', category: 'Low-Fi Rapid Wireframing', icon: MousePointer2 },
-  { name: 'ProtoPie', category: 'Advanced Sensor Prototyping', icon: Smartphone },
-  { name: 'Principle', category: 'Micro-interactions & Timeline', icon: Play },
-  { name: 'Adobe After Effects', category: 'Motion Graphics & UI Keyframing', icon: Video },
-  { name: 'Lottie (LottieFiles)', category: 'JSON Vector Animations', icon: Sparkles },
-  { name: 'Adobe Illustrator', category: 'Vector Icons & Illustration', icon: Palette },
-  { name: 'Adobe Photoshop', category: 'Visual Assets & Retouching', icon: Eye },
-  { name: 'Blender / Spline', category: '3D Spatial UI & WebGL', icon: Box },
   { name: 'Maze', category: 'Unmoderated Usability Testing', icon: Search },
-  { name: 'UserTesting', category: 'Qualitative User Research', icon: Eye },
-  { name: 'Useberry', category: 'Prototype Analytics & Heatmaps', icon: BarChart3 },
-  { name: 'Lookback', category: 'Live Moderated Interviews', icon: Video },
-  { name: 'Typeform / Google Forms', category: 'User Surveys & Questionnaires', icon: FileText },
-  { name: 'Hotjar', category: 'Behavior Heatmaps & Session Replay', icon: Sliders },
-  { name: 'FullStory', category: 'Digital Experience Telemetry', icon: BarChart3 },
-  { name: 'Figma Dev Mode', category: 'Token Handoff & Code Inspect', icon: Code2 },
-  { name: 'Zeplin', category: 'Design-to-Dev Specs', icon: Layers },
-  { name: 'Storybook', category: 'Component Driven UI Library', icon: Boxes },
+  { name: 'Framer', category: 'Motion & Web Publishing', icon: Zap },
+  { name: 'ProtoPie', category: 'Advanced Sensor Prototyping', icon: Smartphone },
+  { name: 'Photoshop', category: 'Visual Assets & Retouching', icon: Eye },
+  { name: 'Illustrator', category: 'Vector Icons & Illustration', icon: Palette },
+  { name: 'After Effects', category: 'Motion Graphics & UI Keyframing', icon: Video },
+  { name: 'Canva', category: 'Visual Design & Brand Assets', icon: Frame },
   { name: 'Jira', category: 'Agile Sprint & Issue Management', icon: CheckSquare },
 ];
 
@@ -99,7 +85,7 @@ export const SkillsToolkit = () => {
                 marginBottom: '20px',
               }}
             >
-              Brought to you by tools & frameworks from
+              Tools & software I design with
             </h2>
             <p
               style={{
@@ -109,7 +95,7 @@ export const SkillsToolkit = () => {
                 marginBottom: '32px',
               }}
             >
-              A specialized ecosystem spanning UI architecture, interactive prototyping, UX research analytics, and engineering handoff.
+              The everyday software, prototyping tools, and handoff platforms I use to take ideas from rough concepts to production-ready design.
             </p>
 
             <div
@@ -126,7 +112,7 @@ export const SkillsToolkit = () => {
                 fontWeight: 700,
               }}
             >
-              <span>27+ Industry Tools</span>
+              <span>{tools.length} Industry Tools</span>
             </div>
           </div>
 
